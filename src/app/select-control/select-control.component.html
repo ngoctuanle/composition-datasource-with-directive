@@ -1,0 +1,12 @@
+<nz-select
+  nzShowSearch
+  [nzPlaceHolder]="placeholder"
+  [nzAllowClear]="true"
+  [formControl]="control"
+>
+  <nz-option
+    *ngFor="let option of options$ | async"
+    [nzLabel]="option.label"
+    [nzValue]="option.value"
+  ></nz-option>
+</nz-select>

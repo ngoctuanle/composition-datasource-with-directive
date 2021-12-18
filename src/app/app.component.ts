@@ -1,10 +1,13 @@
 import { Component } from '@angular/core';
+import { FormControl, FormGroup } from '@angular/forms';
 
 @Component({
   selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+  templateUrl: './app.component.html'
 })
 export class AppComponent {
-  title = 'composition-datasource-with-directive';
+  form = new FormGroup({
+    mode: new FormControl(null),
+    condition: new FormControl(null),
+  })
 }
